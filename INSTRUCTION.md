@@ -196,11 +196,11 @@
 - [ ] Output judge nhất quán JSON schema.
 
 ### Member 4 - Runner/Performance
-- [ ] Không thay đổi main.py.
-- [ ] runner chạy async ổn định cho toàn bộ dataset.
-- [ ] Thu thập được latency/token/cost (hoặc cost estimate).
-- [ ] Có cơ chế regression gate (APPROVE/BLOCK) theo ngưỡng.
-- [ ] Sinh được reports/summary.json và reports/benchmark_results.json.
+- [x] Không thay đổi main.py.
+- [x] runner chạy async ổn định cho toàn bộ dataset.
+- [x] Thu thập được latency/token/cost (hoặc cost estimate).
+- [x] Có cơ chế regression gate (APPROVE/BLOCK) theo ngưỡng.
+- [x] Sinh được reports/summary.json và reports/benchmark_results.json.
 
 ### Member 5 - QA/Analysis/Submission
 - [ ] Điền đầy đủ analysis/failure_analysis.md.
