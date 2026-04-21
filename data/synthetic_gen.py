@@ -261,13 +261,14 @@ def build_local_vector_db(chunks: List[Dict]) -> Dict:
 
     doc_freq = Counter()
     for toks in tokenized_docs:
-        doc_freq.update(set(toks))
+        for tok in sorted(set(toks)):
+            doc_freq[tok] += 1
 
     vocab = sorted(doc_freq.keys())
     token_to_idx = {t: i for i, t in enumerate(vocab)}
     idf = {
         t: math.log((1 + doc_count) / (1 + df)) + 1.0
-        for t, df in doc_freq.items()
+        for t, df in sorted(doc_freq.items())
     }
 
     vectors = []
@@ -277,7 +278,7 @@ def build_local_vector_db(chunks: List[Dict]) -> Dict:
         sparse = {}
         norm_sq = 0.0
 
-        for tok, count in tf.items():
+        for tok, count in sorted(tf.items()):
             weight = (count / max_tf) * idf[tok]
             idx = token_to_idx[tok]
             sparse[str(idx)] = round(weight, 8)
