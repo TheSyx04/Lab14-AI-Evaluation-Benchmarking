@@ -1,0 +1,13 @@
+{
+  "documents_indexed": [
+    "access_control_sop.txt",
+    "hr_leave_policy.txt",
+    "it_helpdesk_faq.txt",
+    "sla_p1_2026.txt",
+    "policy_refund_v4.txt"
+  ],
+  "doc_count": 5,
+  "chunk_count": 34,
+  "id_convention": "<doc_id>#S<section_index_2_digits>",
+  "notes": "Rebuild is optional if previous vector DB already uses compatible IDs."
+}
